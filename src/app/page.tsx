@@ -1,9 +1,3 @@
-import { Banner } from "@/components/Banner";
+import { MultiStepForm } from "@/pages/MultiStepForm/MultiStepForm";
 
-export default function Home() {
-  return (
-    <div>
-      <Banner />
-    </div>
-  );
-}
+export default MultiStepForm;
