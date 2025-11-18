@@ -1,3 +1,5 @@
+import { FormStepper } from "./FormStepper";
+
 export function MultiStepForm() {
   return (
     <div className="flex-1 bg-blue flex items-center justify-center">
@@ -9,6 +11,7 @@ export function MultiStepForm() {
           <div className="px-8">Give us your</div>
           <div className="px-4 bg-blue text-white">feedback</div>
         </div>
+        <FormStepper />
       </div>
     </div>
   );
