@@ -7,11 +7,13 @@ export function MultiStepForm() {
         <div className="text-blue text-lg leading-6 tracking-tight font-medium mb-8">
           Multistep Form
         </div>
-        <div className="font-semibold text-6xl leading-20 tracking-tight min-h-24 flex items-center">
+        <div className="font-semibold text-6xl leading-20 tracking-tight min-h-24 flex items-center mb-12">
           <div className="px-8">Give us your</div>
           <div className="px-4 bg-blue text-white">feedback</div>
         </div>
-        <FormStepper />
+        <div className="max-w-lg w-full">
+          <FormStepper />
+        </div>
       </div>
     </div>
   );
