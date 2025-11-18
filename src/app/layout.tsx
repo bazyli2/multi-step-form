@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { clsx } from "@/utils/clsx";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata: Metadata = {
   title: "Multi Step Form Demo",
