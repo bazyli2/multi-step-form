@@ -1,4 +1,4 @@
-import { Banner } from "@/components/Banner";
+import { Banner } from "./Banner";
 
 export function MultiStepForm() {
   return (
