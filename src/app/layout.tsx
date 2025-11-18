@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={clsx(poppins.className, "min-h-full")}>{children}</body>
+      <body className={clsx(poppins.className, "min-h-full flex flex-col")}>
+        {children}
+      </body>
     </html>
   );
 }
