@@ -38,8 +38,12 @@ export function MultiStepForm() {
               />
             </fieldset>
             <div className="flex justify-between">
-              <Button variant="outlined">Previous Step</Button>
-              <Button variant="contained">Next Step</Button>
+              <Button className="rounded-full" variant="outlined">
+                Previous Step
+              </Button>
+              <Button className="rounded-full" variant="contained">
+                Next Step
+              </Button>
             </div>
           </form>
         </section>
