@@ -26,14 +26,16 @@ export function MultiStepForm() {
             </p>
           </header>
           <form className="contents">
-            <TextField label="Name" placeholder="Full Name" />
-            <TextField label="Email" placeholder="Your Email" />
-            <TextField
-              label="Message"
-              placeholder="Message"
-              multiline
-              rows={5}
-            />
+            <fieldset className="contents">
+              <TextField label="Name" placeholder="Full Name" />
+              <TextField label="Email" placeholder="Your Email" />
+              <TextField
+                label="Message"
+                placeholder="Message"
+                multiline
+                rows={5}
+              />
+            </fieldset>
             <div className="flex justify-between">
               <Button variant="outlined">Previous Step</Button>
               <Button variant="contained">Next Step</Button>
