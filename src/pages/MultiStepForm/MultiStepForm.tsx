@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { FormStepper } from "./FormStepper";
 
 export function MultiStepForm() {
@@ -24,6 +25,16 @@ export function MultiStepForm() {
               Lorem ipsum is placeholder text.
             </p>
           </header>
+          <form className="contents">
+            <TextField label="Name" placeholder="Full Name" />
+            <TextField label="Email" placeholder="Your Email" />
+            <TextField
+              label="Message"
+              placeholder="Message"
+              multiline
+              rows={5}
+            />
+          </form>
         </section>
       </section>
     </main>
