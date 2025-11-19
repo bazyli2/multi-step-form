@@ -22,7 +22,7 @@ export function TextField(props: Props) {
         slotProps={{
           input: {
             className:
-              "bg-bright-gray rounded-lg p-3 placeholder:text-spanish-gray placeholder:opacity-100",
+              "bg-bright-gray rounded-lg p-3 placeholder:text-spanish-gray placeholder:opacity-100 transition border-solid border-2 border-transparent focus:border-blue",
           },
         }}
       />
