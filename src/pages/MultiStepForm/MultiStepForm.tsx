@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { FormStepper } from "./FormStepper";
 
 export function MultiStepForm() {
@@ -34,6 +34,10 @@ export function MultiStepForm() {
               multiline
               rows={5}
             />
+            <div className="flex justify-between">
+              <Button variant="outlined">Previous Step</Button>
+              <Button variant="contained">Next Step</Button>
+            </div>
           </form>
         </section>
       </section>
