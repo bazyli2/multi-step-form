@@ -19,7 +19,12 @@ export function TextField(props: Props) {
         {...rest}
         id={id}
         className="mt-6"
-        slotProps={{ input: { className: "bg-bright-gray rounded-lg p-3" } }}
+        slotProps={{
+          input: {
+            className:
+              "bg-bright-gray rounded-lg p-3 placeholder:text-spanish-gray placeholder:opacity-100",
+          },
+        }}
       />
     </FormControl>
   );
