@@ -1,6 +1,5 @@
-import { Button } from "@mui/material";
 import { FormStepper } from "./FormStepper";
-import { TextField } from "@/components/TextField";
+import { Step1 } from "./steps/Step1";
 
 export function MultiStepForm() {
   return (
@@ -17,33 +16,7 @@ export function MultiStepForm() {
         </header>
         <section className="max-w-lg w-full flex flex-col gap-8">
           <FormStepper />
-          <header className="flex flex-col gap-2">
-            <p className="text-blue font-medium text-sm leading-6">Step 1/4</p>
-            <h3 className="font-medium text-xl leading-7">
-              Enter your Name and Email to Begin!
-            </h3>
-            <p className="text-arsenic leading-7">
-              Lorem ipsum is placeholder text.
-            </p>
-          </header>
-          <form className="contents">
-            <TextField label="Name" placeholder="Full Name" />
-            <TextField label="Email" placeholder="Your Email" />
-            <TextField
-              label="Message"
-              placeholder="Message"
-              multiline
-              rows={5}
-            />
-            <div className="flex justify-between">
-              <Button className="rounded-full" variant="outlined">
-                Previous Step
-              </Button>
-              <Button className="rounded-full" variant="contained">
-                Next Step
-              </Button>
-            </div>
-          </form>
+          <Step1 />
         </section>
       </section>
     </main>
