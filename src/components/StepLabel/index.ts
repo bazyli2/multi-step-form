@@ -1,1 +1,0 @@
-export { StepLabel } from "./StepLabel";

@@ -1,7 +1,7 @@
 "use client";
 
-import { StepLabel } from "@/components/StepLabel";
-import { Step, Stepper } from "@mui/material";
+import { StepIcon } from "@/components/StepIcon";
+import { Step, StepLabel, Stepper } from "@mui/material";
 import { useState } from "react";
 
 const steps = [1, 2, 3, 4];
@@ -11,7 +11,7 @@ export function FormStepper() {
     <Stepper activeStep={activeStep}>
       {steps.map((step) => (
         <Step key={step}>
-          <StepLabel />
+          <StepLabel StepIconComponent={StepIcon} />
         </Step>
       ))}
     </Stepper>
