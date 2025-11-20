@@ -9,7 +9,7 @@ export function StepIcon(props: ComponentProps<typeof MuiStepIcon>) {
       className={clsx(
         "[&>text]:fill-black [&>text]:font-semibold text-azureish-white",
         {
-          "text-blue": props.active ?? false,
+          "text-blue": (props.active ?? false) || (props.completed ?? false),
         },
       )}
     />
