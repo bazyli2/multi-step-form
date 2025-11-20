@@ -27,16 +27,14 @@ export function MultiStepForm() {
             </p>
           </header>
           <form className="contents">
-            <fieldset className="contents">
-              <TextField label="Name" placeholder="Full Name" />
-              <TextField label="Email" placeholder="Your Email" />
-              <TextField
-                label="Message"
-                placeholder="Message"
-                multiline
-                rows={5}
-              />
-            </fieldset>
+            <TextField label="Name" placeholder="Full Name" />
+            <TextField label="Email" placeholder="Your Email" />
+            <TextField
+              label="Message"
+              placeholder="Message"
+              multiline
+              rows={5}
+            />
             <div className="flex justify-between">
               <Button className="rounded-full" variant="outlined">
                 Previous Step
