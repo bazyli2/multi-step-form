@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { CountrySelect } from "./CountrySelect";
 
 export function Step3() {
@@ -14,6 +15,7 @@ export function Step3() {
       </header>
       <form className="contents">
         <CountrySelect />
+        <TextField label="Postal Code" placeholder="Postal Code" />
       </form>
     </>
   );
