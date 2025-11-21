@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { FeatureSelect } from "./FeatureSelect";
 
 export function Step2() {
@@ -12,8 +13,9 @@ export function Step2() {
           Lorem ipsum is placeholder text.
         </p>
       </header>
-      <form>
+      <form className="contents">
         <FeatureSelect />
+        <TextField label="Message" placeholder="Message" multiline rows={5} />
       </form>
     </>
   );
