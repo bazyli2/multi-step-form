@@ -1,3 +1,5 @@
-import { MultiStepForm } from "@/pages/MultiStepForm/MultiStepForm";
+import { redirect } from "next/navigation";
 
-export default MultiStepForm;
+export default function Page() {
+  return redirect("/multi-step-form");
+}
