@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { FeatureSelect } from "./FeatureSelect";
 
 export function Step2() {
@@ -16,6 +16,14 @@ export function Step2() {
       <form className="contents">
         <FeatureSelect />
         <TextField label="Message" placeholder="Message" multiline rows={5} />
+        <div className="flex justify-between">
+          <Button className="rounded-full" variant="outlined">
+            Previous Step
+          </Button>
+          <Button className="rounded-full" variant="contained">
+            Next Step
+          </Button>
+        </div>
       </form>
     </>
   );
