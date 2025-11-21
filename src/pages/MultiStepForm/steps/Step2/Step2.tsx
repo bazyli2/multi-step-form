@@ -1,3 +1,5 @@
+import { FeatureSelect } from "./FeatureSelect";
+
 export function Step2() {
   return (
     <>
@@ -10,6 +12,9 @@ export function Step2() {
           Lorem ipsum is placeholder text.
         </p>
       </header>
+      <form>
+        <FeatureSelect />
+      </form>
     </>
   );
 }
