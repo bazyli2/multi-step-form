@@ -1,3 +1,5 @@
+import { CountrySelect } from "./CountrySelect";
+
 export function Step3() {
   return (
     <>
@@ -10,6 +12,9 @@ export function Step3() {
           Lorem ipsum is placeholder text.
         </p>
       </header>
+      <form className="contents">
+        <CountrySelect />
+      </form>
     </>
   );
 }

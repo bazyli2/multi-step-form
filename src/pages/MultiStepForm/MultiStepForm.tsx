@@ -1,5 +1,6 @@
 import { FormStepper } from "./FormStepper";
 import { Step2 } from "./steps/Step2";
+import { Step3 } from "./steps/Step3";
 
 export function MultiStepForm() {
   return (
@@ -16,7 +17,7 @@ export function MultiStepForm() {
         </header>
         <section className="max-w-lg w-full flex flex-col gap-8">
           <FormStepper />
-          <Step2 />
+          <Step3 />
         </section>
       </section>
     </main>
