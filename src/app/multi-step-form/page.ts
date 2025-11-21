@@ -1,3 +1,3 @@
-import { Step1 } from "@/pages/MultiStepForm/steps/Step1";
+import { PersonalDetails } from "@/pages/PersonalDetails";
 
-export default Step1;
+export default PersonalDetails;

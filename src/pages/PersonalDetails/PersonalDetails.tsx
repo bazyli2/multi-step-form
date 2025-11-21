@@ -1,6 +1,6 @@
 import { Button, TextField } from "@mui/material";
 
-export function Step1() {
+export function PersonalDetails() {
   return (
     <>
       <header className="flex flex-col gap-2">
