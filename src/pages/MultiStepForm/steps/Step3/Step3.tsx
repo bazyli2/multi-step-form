@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { CountrySelect } from "./CountrySelect";
 
 export function Step3() {
@@ -7,7 +7,7 @@ export function Step3() {
       <header className="flex flex-col gap-2">
         <p className="text-blue font-medium text-sm leading-6">Step 3/4</p>
         <h3 className="font-medium text-xl leading-7">
-          Which feature are you most interested in?
+          Enter your Location Details!
         </h3>
         <p className="text-arsenic leading-7">
           Lorem ipsum is placeholder text.
@@ -16,6 +16,14 @@ export function Step3() {
       <form className="contents">
         <CountrySelect />
         <TextField label="Postal Code" placeholder="Postal Code" />
+        <div className="flex justify-between">
+          <Button className="rounded-full" variant="outlined">
+            Previous Step
+          </Button>
+          <Button className="rounded-full" variant="contained">
+            Next Step
+          </Button>
+        </div>
       </form>
     </>
   );
