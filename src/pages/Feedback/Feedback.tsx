@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { FeatureSelect } from "./FeatureSelect";
 
-export function Step2() {
+export function Feedback() {
   return (
     <>
       <header className="flex flex-col gap-2">
