@@ -1,8 +1,8 @@
 import { paramsSchema } from "@/modules/multi-step-form/schema";
-import { Feedback } from "@/pages/Feedback";
-import { LocationDetails } from "@/pages/LocationDetails";
-import { PersonalDetails } from "@/pages/PersonalDetails";
 import { parseParams } from "@/utils/parseParams";
+import { PersonalDetails } from "../pages/PersonalDetails";
+import { Feedback } from "../pages/Feedback";
+import { LocationDetails } from "../pages/LocationDetails";
 
 export async function Router(props: Props) {
   const params = await props.params;
