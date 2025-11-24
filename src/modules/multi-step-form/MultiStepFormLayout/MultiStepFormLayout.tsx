@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { FormStepper } from "./FormStepper";
 import { parseParams } from "@/utils/parseParams";
-import { paramsSchema } from "./schema";
+import { paramsSchema } from "../schema";
 
 export async function MultiStepFormLayout(props: Props) {
   const params = await props.params;

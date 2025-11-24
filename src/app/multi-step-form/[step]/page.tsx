@@ -1,4 +1,4 @@
-import { paramsSchema } from "@/modules/multi-step-form/MultiStepFormLayout/schema";
+import { paramsSchema } from "@/modules/multi-step-form/schema";
 import { Feedback } from "@/pages/Feedback";
 import { LocationDetails } from "@/pages/LocationDetails";
 import { PersonalDetails } from "@/pages/PersonalDetails";
