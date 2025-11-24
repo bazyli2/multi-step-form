@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { CountrySelect } from "./CountrySelect";
 
-export function Step3() {
+export function LocationDetails() {
   return (
     <>
       <header className="flex flex-col gap-2">
