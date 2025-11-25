@@ -1,10 +1,10 @@
 "use client";
 
-import { StepConnector } from "@/components/StepConnector";
-import { StepIcon } from "@/components/StepIcon";
 import { Step, StepLabel, Stepper } from "@mui/material";
 import { useState } from "react";
 import { STEP_COUNT } from "../../config";
+import { StepConnector } from "./StepConnector";
+import { StepIcon } from "./StepIcon";
 
 const steps = Array.from({ length: STEP_COUNT }, (v, i) => i);
 
