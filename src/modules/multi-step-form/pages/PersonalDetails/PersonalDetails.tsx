@@ -1,8 +1,21 @@
-import { TextField } from "@mui/material";
+"use client";
 import { NextButton } from "../../components/NextButton";
 import { PreviousButton } from "../../components/PreviousButton";
+import { ControlledTextField } from "@/components/ControlledTextField";
+import { usePersistedForm } from "@/usePersistedForm";
+
+const defaultValues = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+type Values = typeof defaultValues;
 
 export function PersonalDetails() {
+  const { control } = usePersistedForm<Values>({
+    defaultValues,
+  });
   return (
     <>
       <header className="flex flex-col gap-2">
@@ -15,9 +28,26 @@ export function PersonalDetails() {
         </p>
       </header>
       <form className="contents">
-        <TextField label="Name" placeholder="Full Name" />
-        <TextField label="Email" placeholder="Your Email" />
-        <TextField label="Message" placeholder="Message" multiline rows={5} />
+        <ControlledTextField
+          control={control}
+          name="name"
+          label="Name"
+          placeholder="Full Name"
+        />
+        <ControlledTextField
+          control={control}
+          name="email"
+          label="Email"
+          placeholder="Your Email"
+        />
+        <ControlledTextField
+          control={control}
+          name="message"
+          label="Message"
+          placeholder="Message"
+          multiline
+          rows={5}
+        />
         <div className="flex justify-between">
           <PreviousButton />
           <NextButton />

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 import { FieldValues, useForm, UseFormProps } from "react-hook-form";
 
@@ -8,20 +10,18 @@ export function usePersistedForm<
   TContext = unknown,
   TTransformedValues = TFieldValues,
 >(props?: UseFormProps<TFieldValues, TContext, TTransformedValues>) {
-  const { subscribe, ...rest } = useForm<
+  const { subscribe, reset, ...rest } = useForm<
     TFieldValues,
     TContext,
     TTransformedValues
-  >({
-    ...props,
-    defaultValues: () => {
-      const item = localStorage.getItem(key);
-      if (item === null) {
-        return props?.defaultValues;
-      }
-      return JSON.parse(item);
-    },
-  });
+  >(props);
+
+  useEffect(() => {
+    const item = localStorage.getItem(key);
+    if (item === null) return;
+    const data = JSON.parse(item);
+    reset(data);
+  }, [reset]);
 
   useEffect(() => {
     // make sure to unsubscribe;
@@ -40,5 +40,6 @@ export function usePersistedForm<
   return {
     ...rest,
     subscribe,
+    reset,
   } as const;
 }
