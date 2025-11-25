@@ -1,7 +1,9 @@
 import z from "zod";
 
-const stepCount = 3;
-
 export const paramsSchema = z.object({
-  step: z.coerce.number().int().min(1).max(stepCount),
+  step: z.union([
+    z.literal("1").transform(() => 1 as const),
+    z.literal("2").transform(() => 2 as const),
+    z.literal("3").transform(() => 3 as const),
+  ]),
 });
