@@ -19,7 +19,7 @@ export async function MultiStepFormLayout(props: Props) {
         <section className="max-w-lg w-full flex flex-col gap-8 min-h-[580px]">
           <FormStepper />
           {props.children}
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-1 items-end">
             <PreviousButton />
             <NextButton />
           </div>
