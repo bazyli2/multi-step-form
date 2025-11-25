@@ -1,13 +1,7 @@
 import { ReactNode } from "react";
 import { FormStepper } from "./FormStepper";
-import { parseParams } from "@/utils/parseParams";
-import { paramsSchema } from "../schema";
 
 export async function MultiStepFormLayout(props: Props) {
-  const params = await props.params;
-  console.log(params);
-  const { step } = parseParams(paramsSchema, params);
-  console.log(step);
   return (
     <main className="flex-1 bg-blue flex items-center justify-center tracking-tight">
       <section className="max-w-7xl bg-white flex-1 py-16 flex flex-col items-center">
