@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { FieldValues, useForm, UseFormProps } from "react-hook-form";
+import { debounce } from "./utils/debounce";
 
 const key = "form";
 
@@ -24,14 +25,15 @@ export function usePersistedForm<
   }, [reset]);
 
   useEffect(() => {
+    function persistValues({ values }: { values: TFieldValues }) {
+      localStorage.setItem(key, JSON.stringify(values));
+    }
     // make sure to unsubscribe;
     const callback = subscribe({
       formState: {
         values: true,
       },
-      callback: ({ values }) => {
-        localStorage.setItem(key, JSON.stringify(values));
-      },
+      callback: debounce(persistValues, 1000),
     });
 
     return () => callback();
