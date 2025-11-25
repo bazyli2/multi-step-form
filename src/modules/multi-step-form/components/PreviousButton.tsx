@@ -7,8 +7,7 @@ import Link from "next/link";
 import { useStepParam } from "../hooks/useStepParam";
 
 export function PreviousButton() {
-  const param = useStepParam();
-  const { step } = result.data;
+  const step = useStepParam();
   const disabled = step === 1;
   const href = `/multi-step-form/${step - 1}`;
   return (

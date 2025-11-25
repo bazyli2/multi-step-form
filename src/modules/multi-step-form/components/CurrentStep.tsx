@@ -1,3 +1,5 @@
+"use client";
+
 import { STEP_COUNT } from "../config";
 import { useStepParam } from "../hooks/useStepParam";
 
