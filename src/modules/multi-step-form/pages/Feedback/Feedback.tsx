@@ -1,7 +1,5 @@
 import { TextField } from "@mui/material";
 import { FeatureSelect } from "./FeatureSelect";
-import { NextButton } from "../../components/NextButton";
-import { PreviousButton } from "../../components/PreviousButton";
 import { CurrentStep } from "../../components/CurrentStep";
 
 export function Feedback() {
@@ -19,10 +17,6 @@ export function Feedback() {
       <form className="contents">
         <FeatureSelect />
         <TextField label="Message" placeholder="Message" multiline rows={5} />
-        <div className="flex justify-between">
-          <PreviousButton />
-          <NextButton />
-        </div>
       </form>
     </>
   );

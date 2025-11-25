@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { FormStepper } from "./FormStepper";
+import { PreviousButton } from "../components/PreviousButton";
+import { NextButton } from "../components/NextButton";
 
 export async function MultiStepFormLayout(props: Props) {
   return (
@@ -17,6 +19,10 @@ export async function MultiStepFormLayout(props: Props) {
         <section className="max-w-lg w-full flex flex-col gap-8 min-h-[580px]">
           <FormStepper />
           {props.children}
+          <div className="flex justify-between">
+            <PreviousButton />
+            <NextButton />
+          </div>
         </section>
       </section>
     </main>

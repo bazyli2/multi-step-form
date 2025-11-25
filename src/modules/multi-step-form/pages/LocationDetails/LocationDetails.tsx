@@ -19,10 +19,6 @@ export function LocationDetails() {
       <form className="contents">
         <CountrySelect />
         <TextField label="Postal Code" placeholder="Postal Code" />
-        <div className="flex justify-between">
-          <PreviousButton />
-          <NextButton />
-        </div>
       </form>
     </>
   );

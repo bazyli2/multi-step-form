@@ -49,10 +49,6 @@ export function PersonalDetails() {
           multiline
           rows={5}
         />
-        <div className="flex justify-between">
-          <PreviousButton />
-          <NextButton />
-        </div>
       </form>
     </>
   );
