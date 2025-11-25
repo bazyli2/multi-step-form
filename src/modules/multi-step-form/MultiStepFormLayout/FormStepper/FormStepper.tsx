@@ -4,8 +4,10 @@ import { StepConnector } from "@/components/StepConnector";
 import { StepIcon } from "@/components/StepIcon";
 import { Step, StepLabel, Stepper } from "@mui/material";
 import { useState } from "react";
+import { STEP_COUNT } from "../../config";
 
-const steps = [1, 2, 3, 4];
+const steps = Array.from({ length: STEP_COUNT }, (v, i) => i);
+
 export function FormStepper() {
   const [activeStep, setActiveStep] = useState(0);
   return (
