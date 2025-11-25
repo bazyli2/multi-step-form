@@ -1,4 +1,5 @@
 import { Button, TextField } from "@mui/material";
+import { NextButton } from "../../components/NextButton";
 
 export function PersonalDetails() {
   return (
@@ -20,9 +21,7 @@ export function PersonalDetails() {
           <Button className="rounded-full" variant="outlined">
             Previous Step
           </Button>
-          <Button className="rounded-full" variant="contained">
-            Next Step
-          </Button>
+          <NextButton />
         </div>
       </form>
     </>

@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import { FeatureSelect } from "./FeatureSelect";
+import { NextButton } from "../../components/NextButton";
 
 export function Feedback() {
   return (
@@ -20,9 +21,7 @@ export function Feedback() {
           <Button className="rounded-full" variant="outlined">
             Previous Step
           </Button>
-          <Button className="rounded-full" variant="contained">
-            Next Step
-          </Button>
+          <NextButton />
         </div>
       </form>
     </>

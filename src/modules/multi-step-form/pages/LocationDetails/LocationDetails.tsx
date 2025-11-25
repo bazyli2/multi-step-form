@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import { CountrySelect } from "./CountrySelect";
+import { NextButton } from "../../components/NextButton";
 
 export function LocationDetails() {
   return (
@@ -20,9 +21,7 @@ export function LocationDetails() {
           <Button className="rounded-full" variant="outlined">
             Previous Step
           </Button>
-          <Button className="rounded-full" variant="contained">
-            Next Step
-          </Button>
+          <NextButton />
         </div>
       </form>
     </>
