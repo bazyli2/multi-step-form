@@ -14,7 +14,7 @@ export async function MultiStepFormLayout(props: Props) {
             <span className="px-4 bg-blue text-white">feedback</span>
           </h2>
         </header>
-        <section className="max-w-lg w-full flex flex-col gap-8">
+        <section className="max-w-lg w-full flex flex-col gap-8 min-h-[580px]">
           <FormStepper />
           {props.children}
         </section>
