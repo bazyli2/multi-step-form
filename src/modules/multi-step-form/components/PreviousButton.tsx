@@ -20,7 +20,7 @@ export function PreviousButton() {
       className="rounded-full"
       variant="outlined"
     >
-      Next Step
+      Previous Step
     </Button>
   );
 }
