@@ -1,6 +1,7 @@
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { CountrySelect } from "./CountrySelect";
 import { NextButton } from "../../components/NextButton";
+import { PreviousButton } from "../../components/PreviousButton";
 
 export function LocationDetails() {
   return (
@@ -18,9 +19,7 @@ export function LocationDetails() {
         <CountrySelect />
         <TextField label="Postal Code" placeholder="Postal Code" />
         <div className="flex justify-between">
-          <Button className="rounded-full" variant="outlined">
-            Previous Step
-          </Button>
+          <PreviousButton />
           <NextButton />
         </div>
       </form>
