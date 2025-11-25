@@ -1,4 +1,5 @@
 "use client";
+import { CurrentStep } from "../../components/CurrentStep";
 import { NextButton } from "../../components/NextButton";
 import { PreviousButton } from "../../components/PreviousButton";
 import { ControlledTextField } from "@/components/ControlledTextField";
@@ -19,7 +20,7 @@ export function PersonalDetails() {
   return (
     <>
       <header className="flex flex-col gap-2">
-        <p className="text-blue font-medium text-sm leading-6">Step 1/4</p>
+        <CurrentStep />
         <h3 className="font-medium text-xl leading-7">
           Enter your Name and Email to Begin!
         </h3>

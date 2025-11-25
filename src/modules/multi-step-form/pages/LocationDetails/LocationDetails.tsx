@@ -2,12 +2,13 @@ import { TextField } from "@mui/material";
 import { CountrySelect } from "./CountrySelect";
 import { NextButton } from "../../components/NextButton";
 import { PreviousButton } from "../../components/PreviousButton";
+import { CurrentStep } from "../../components/CurrentStep";
 
 export function LocationDetails() {
   return (
     <>
       <header className="flex flex-col gap-2">
-        <p className="text-blue font-medium text-sm leading-6">Step 3/4</p>
+        <CurrentStep />
         <h3 className="font-medium text-xl leading-7">
           Enter your Location Details!
         </h3>

@@ -2,12 +2,13 @@ import { TextField } from "@mui/material";
 import { FeatureSelect } from "./FeatureSelect";
 import { NextButton } from "../../components/NextButton";
 import { PreviousButton } from "../../components/PreviousButton";
+import { CurrentStep } from "../../components/CurrentStep";
 
 export function Feedback() {
   return (
     <>
       <header className="flex flex-col gap-2">
-        <p className="text-blue font-medium text-sm leading-6">Step 2/4</p>
+        <CurrentStep />
         <h3 className="font-medium text-xl leading-7">
           Which feature are you most interested in?
         </h3>
