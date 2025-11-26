@@ -1,7 +1,7 @@
 "use client";
 
-import { CurrentStep } from "../components/CurrentStep";
-import { useStepParam } from "../hooks/useStepParam";
+import { CurrentStep } from "../../components/CurrentStep";
+import { useStepParam } from "../../hooks/useStepParam";
 
 const titles = {
   1: "Enter your Name and Email to Begin!",
