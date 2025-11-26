@@ -4,6 +4,7 @@ import { usePersistedForm } from "@/usePersistedForm";
 import z from "zod";
 import { formSchema } from "./schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { FormLoading } from "../../components/FormLoading";
 
 type Values = z.infer<typeof formSchema>;
 
@@ -19,7 +20,7 @@ export function PersonalDetails() {
     resolver: zodResolver(formSchema),
     mode: "onChange",
   });
-  if (isLoading) return <div>loading...</div>;
+  if (isLoading) return <FormLoading />;
   return (
     <form className="contents">
       <ControlledTextField
