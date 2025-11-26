@@ -8,7 +8,8 @@ import { useStepParam } from "../hooks/useStepParam";
 export function NextButton() {
   const step = useStepParam();
   const disabled = step === STEP_COUNT;
-  const href = `/multi-step-form/${step + 1}`;
+  const nextStep = Math.min(STEP_COUNT, step + 1);
+  const href = `/multi-step-form/${nextStep}`;
   return (
     <Button
       disabled={disabled}
