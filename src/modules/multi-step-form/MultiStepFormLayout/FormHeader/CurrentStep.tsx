@@ -1,7 +1,7 @@
 "use client";
 
-import { STEP_COUNT } from "../config";
-import { useStepParam } from "../hooks/useStepParam";
+import { STEP_COUNT } from "../../config";
+import { useStepParam } from "../../hooks/useStepParam";
 
 export function CurrentStep() {
   const currentStep = useStepParam();
