@@ -1,1 +1,1 @@
-export { FeedbackForm as Feedback } from "./Feedback";
+export { Feedback } from "./Feedback";
