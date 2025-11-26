@@ -1,18 +1,23 @@
 "use client";
 import { ControlledTextField } from "@/components/ControlledTextField";
 import { usePersistedForm } from "@/usePersistedForm";
+import z from "zod";
+import { formSchema } from "./schema";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-const defaultValues = {
+type Values = z.infer<typeof formSchema>;
+
+const defaultValues: Values = {
   name: "",
   email: "",
   message: "",
 };
 
-type Values = typeof defaultValues;
-
 export function PersonalDetails() {
   const { control } = usePersistedForm<Values>({
     defaultValues,
+    resolver: zodResolver(formSchema),
+    mode: "onChange",
   });
   return (
     <form className="contents">
