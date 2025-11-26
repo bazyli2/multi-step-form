@@ -14,11 +14,12 @@ const defaultValues: Values = {
 };
 
 export function PersonalDetails() {
-  const { control } = usePersistedForm<Values>({
+  const { control, isLoading } = usePersistedForm<Values>({
     defaultValues,
     resolver: zodResolver(formSchema),
     mode: "onChange",
   });
+  if (isLoading) return <div>loading...</div>;
   return (
     <form className="contents">
       <ControlledTextField

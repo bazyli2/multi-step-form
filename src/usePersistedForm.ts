@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FieldValues, useForm, UseFormProps } from "react-hook-form";
 import { debounce } from "./utils/debounce";
 
@@ -11,6 +11,7 @@ export function usePersistedForm<
   TContext = unknown,
   TTransformedValues = TFieldValues,
 >(props?: UseFormProps<TFieldValues, TContext, TTransformedValues>) {
+  const [isLoading, setIsLoading] = useState(true);
   const { subscribe, reset, ...rest } = useForm<
     TFieldValues,
     TContext,
@@ -19,9 +20,12 @@ export function usePersistedForm<
 
   useEffect(() => {
     const item = localStorage.getItem(key);
-    if (item === null) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (item === null) return setIsLoading(false);
     const data = JSON.parse(item);
     reset(data);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsLoading(false);
   }, [reset]);
 
   useEffect(() => {
@@ -43,5 +47,6 @@ export function usePersistedForm<
     ...rest,
     subscribe,
     reset,
+    isLoading,
   } as const;
 }
