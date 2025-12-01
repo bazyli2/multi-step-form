@@ -1,3 +1,3 @@
-import { StepLayout } from "@/modules/checkout/StepLayout";
+import { StepLayout } from "@/modules/checkout/layouts/StepLayout";
 
 export default StepLayout;
