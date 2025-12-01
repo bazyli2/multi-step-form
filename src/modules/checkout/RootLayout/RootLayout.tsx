@@ -10,10 +10,11 @@ import ColorModeIconDropdown from "./ColorModeIconDropdown";
 import SitemarkIcon from "./SitemarkIcon";
 import Info from "./Info";
 import InfoMobile from "./InfoMobile";
+import { ReactNode } from "react";
 
 const price = "$134.98";
 
-export function RootLayout() {
+export function RootLayout(props: Props) {
   return (
     <>
       <Box sx={{ position: "fixed", top: "1rem", right: "1rem" }}>
@@ -137,102 +138,14 @@ export function RootLayout() {
               gap: { xs: 5, md: "none" },
             }}
           >
-            {/* <Stepper */}
-            {/*   id="mobile-stepper" */}
-            {/*   activeStep={activeStep} */}
-            {/*   alternativeLabel */}
-            {/*   sx={{ display: { sm: "flex", md: "none" } }} */}
-            {/* > */}
-            {/*   {steps.map((label) => ( */}
-            {/*     <Step */}
-            {/*       sx={{ */}
-            {/*         ":first-child": { pl: 0 }, */}
-            {/*         ":last-child": { pr: 0 }, */}
-            {/*         "& .MuiStepConnector-root": { top: { xs: 6, sm: 12 } }, */}
-            {/*       }} */}
-            {/*       key={label} */}
-            {/*     > */}
-            {/*       <StepLabel */}
-            {/*         sx={{ */}
-            {/*           ".MuiStepLabel-labelContainer": { maxWidth: "70px" }, */}
-            {/*         }} */}
-            {/*       > */}
-            {/*         {label} */}
-            {/*       </StepLabel> */}
-            {/*     </Step> */}
-            {/*   ))} */}
-            {/* </Stepper> */}
-            {/* {activeStep === steps.length ? ( */}
-            {/*   <Stack spacing={2} useFlexGap> */}
-            {/*     <Typography variant="h1">📦</Typography> */}
-            {/*     <Typography variant="h5">Thank you for your order!</Typography> */}
-            {/*     <Typography variant="body1" sx={{ color: "text.secondary" }}> */}
-            {/*       Your order number is */}
-            {/*       <strong>&nbsp;#140396</strong>. We have emailed your order */}
-            {/*       confirmation and will update you once its shipped. */}
-            {/*     </Typography> */}
-            {/*     <Button */}
-            {/*       variant="contained" */}
-            {/*       sx={{ alignSelf: "start", width: { xs: "100%", sm: "auto" } }} */}
-            {/*     > */}
-            {/*       Go to my orders */}
-            {/*     </Button> */}
-            {/*   </Stack> */}
-            {/* ) : ( */}
-            {/*   <React.Fragment> */}
-            {/*     {getStepContent(activeStep)} */}
-            {/*     <Box */}
-            {/*       sx={[ */}
-            {/*         { */}
-            {/*           display: "flex", */}
-            {/*           flexDirection: { xs: "column-reverse", sm: "row" }, */}
-            {/*           alignItems: "end", */}
-            {/*           flexGrow: 1, */}
-            {/*           gap: 1, */}
-            {/*           pb: { xs: 12, sm: 0 }, */}
-            {/*           mt: { xs: 2, sm: 0 }, */}
-            {/*           mb: "60px", */}
-            {/*         }, */}
-            {/*         activeStep !== 0 */}
-            {/*           ? { justifyContent: "space-between" } */}
-            {/*           : { justifyContent: "flex-end" }, */}
-            {/*       ]} */}
-            {/*     > */}
-            {/*       {activeStep !== 0 && ( */}
-            {/*         <Button */}
-            {/*           startIcon={<ChevronLeftRoundedIcon />} */}
-            {/*           onClick={handleBack} */}
-            {/*           variant="text" */}
-            {/*           sx={{ display: { xs: "none", sm: "flex" } }} */}
-            {/*         > */}
-            {/*           Previous */}
-            {/*         </Button> */}
-            {/*       )} */}
-            {/*       {activeStep !== 0 && ( */}
-            {/*         <Button */}
-            {/*           startIcon={<ChevronLeftRoundedIcon />} */}
-            {/*           onClick={handleBack} */}
-            {/*           variant="outlined" */}
-            {/*           fullWidth */}
-            {/*           sx={{ display: { xs: "flex", sm: "none" } }} */}
-            {/*         > */}
-            {/*           Previous */}
-            {/*         </Button> */}
-            {/*       )} */}
-            {/*       <Button */}
-            {/*         variant="contained" */}
-            {/*         endIcon={<ChevronRightRoundedIcon />} */}
-            {/*         onClick={handleNext} */}
-            {/*         sx={{ width: { xs: "100%", sm: "fit-content" } }} */}
-            {/*       > */}
-            {/*         {activeStep === steps.length - 1 ? "Place order" : "Next"} */}
-            {/*       </Button> */}
-            {/*     </Box> */}
-            {/*   </React.Fragment> */}
-            {/* )} */}
+            {props.children}
           </Box>
         </Grid>
       </Grid>
     </>
   );
+}
+
+interface Props {
+  children: ReactNode;
 }
