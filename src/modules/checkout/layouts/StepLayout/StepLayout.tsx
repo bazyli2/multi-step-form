@@ -6,7 +6,6 @@ import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 const activeStep = 0;
 
 export function StepLayout(props: Props) {
-  console.log("step layout");
   return (
     <>
       {props.children}
