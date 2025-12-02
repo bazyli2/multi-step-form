@@ -1,10 +1,4 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import ColorModeIconDropdown from "./ColorModeIconDropdown";
 import SitemarkIcon from "./SitemarkIcon";
 import Info from "./Info";
