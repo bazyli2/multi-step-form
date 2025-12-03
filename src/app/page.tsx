@@ -1,3 +1,5 @@
-import { Checkout } from "@/modules/multi-step-form/pages/Checkout";
+import { redirect } from "next/navigation";
 
-export default Checkout;
+export default function Page() {
+  return redirect("/checkout/1");
+}

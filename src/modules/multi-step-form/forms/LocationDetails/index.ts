@@ -1,1 +1,0 @@
-export { LocationDetails } from "./LocationDetails";
