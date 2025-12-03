@@ -4,15 +4,10 @@ import SitemarkIcon from "./SitemarkIcon";
 import Info from "./Info";
 import InfoMobile from "./InfoMobile";
 import { ReactNode } from "react";
-import { NavigationButtons } from "./NavigationButtons";
-import { parseParams } from "@/utils/parseParams";
-import { paramsSchema } from "../schema";
 
 const price = "$134.98";
 
 export async function Layout(props: Props) {
-  const params = await props.params;
-  const { step } = parseParams(paramsSchema, params);
   return (
     <>
       <Box sx={{ position: "fixed", top: "1rem", right: "1rem" }}>
@@ -137,7 +132,6 @@ export async function Layout(props: Props) {
             }}
           >
             {props.children}
-            <NavigationButtons step={step} />
           </Box>
         </Grid>
       </Grid>
@@ -147,5 +141,4 @@ export async function Layout(props: Props) {
 
 interface Props {
   children: ReactNode;
-  params: Promise<unknown>;
 }
