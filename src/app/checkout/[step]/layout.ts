@@ -1,3 +1,3 @@
-import { RootLayout } from "@/modules/checkout/layouts/RootLayout";
+import { Layout } from "@/modules/checkout/Layout";
 
-export default RootLayout;
+export default Layout;

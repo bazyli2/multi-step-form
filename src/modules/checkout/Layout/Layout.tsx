@@ -8,7 +8,7 @@ import { NavigationButtons } from "./NavigationButtons";
 
 const price = "$134.98";
 
-export function RootLayout(props: Props) {
+export function Layout(props: Props) {
   return (
     <>
       <Box sx={{ position: "fixed", top: "1rem", right: "1rem" }}>
