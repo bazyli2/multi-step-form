@@ -1,12 +1,11 @@
 "use client";
 
 import { Box } from "@mui/material";
-import { useStepParam } from "@/modules/checkout/hooks/useStepParam";
 import { PreviousButton } from "./PreviousButton";
 import { NextButton } from "./NextButton";
+import { Step } from "../../schema";
 
-export function NavigationButtons() {
-  const step = useStepParam();
+export function NavigationButtons(props: Props) {
   return (
     <Box
       sx={[
@@ -20,21 +19,27 @@ export function NavigationButtons() {
           mt: { xs: 2, sm: 0 },
           mb: "60px",
         },
-        step !== 1
+        props.step !== 1
           ? { justifyContent: "space-between" }
           : { justifyContent: "flex-end" },
       ]}
     >
       <PreviousButton
+        step={props.step}
         variant="text"
         sx={{ display: { xs: "none", sm: "flex" } }}
       />
       <PreviousButton
+        step={props.step}
         variant="outlined"
         fullWidth
         sx={{ display: { xs: "flex", sm: "none" } }}
       />
-      <NextButton />
+      <NextButton step={props.step} />
     </Box>
   );
+}
+
+interface Props {
+  step: Step;
 }

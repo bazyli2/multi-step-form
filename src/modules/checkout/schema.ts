@@ -8,3 +8,5 @@ export const paramsSchema = z.object({
     z.literal("4").transform(() => 4 as const),
   ]),
 });
+
+export type Step = z.infer<typeof paramsSchema>["step"];
