@@ -4,6 +4,7 @@ import SitemarkIcon from "./SitemarkIcon";
 import Info from "./Info";
 import InfoMobile from "./InfoMobile";
 import { ReactNode } from "react";
+import { NavigationButtons } from "./NavigationButtons";
 
 const price = "$134.98";
 
@@ -132,6 +133,7 @@ export function RootLayout(props: Props) {
             }}
           >
             {props.children}
+            <NavigationButtons />
           </Box>
         </Grid>
       </Grid>

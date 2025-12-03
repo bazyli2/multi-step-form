@@ -1,3 +1,3 @@
-import { StepLayout } from "@/modules/checkout/layouts/StepLayout";
+import { RootLayout } from "@/modules/checkout/layouts/RootLayout";
 
-export default StepLayout;
+export default RootLayout;

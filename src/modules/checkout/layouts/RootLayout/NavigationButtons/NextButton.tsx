@@ -8,7 +8,7 @@ import { STEP_COUNT } from "@/modules/checkout/config";
 export function NextButton(props: ComponentProps<typeof Button>) {
   const step = useStepParam();
   const nextStep = Math.min(STEP_COUNT, step + 1);
-  const href = `/multi-step-form/${nextStep}`;
+  const href = `/checkout/${nextStep}`;
   if (step === STEP_COUNT) return null;
   return (
     <Button
