@@ -1,4 +1,3 @@
-import { TextField } from "@mui/material";
 import { ComponentProps } from "react";
 import {
   FieldError,
@@ -6,6 +5,7 @@ import {
   Path,
   UseFormRegister,
 } from "react-hook-form";
+import { FormField } from "./FormField";
 
 export function RHFTextField<TFieldValues extends FieldValues>(
   props: Props<TFieldValues>,
@@ -14,12 +14,12 @@ export function RHFTextField<TFieldValues extends FieldValues>(
   const { ref, onBlur, onChange } = register(name);
   const isError = error !== undefined;
   return (
-    <TextField
+    <FormField
       {...rest}
       inputRef={ref}
       name={name}
       slotProps={{
-        htmlInput: {
+        input: {
           onChange,
           onBlur,
         },
@@ -37,7 +37,7 @@ interface RHFProps<TFieldValues extends FieldValues> {
 }
 
 type Props<TFieldValues extends FieldValues> = Omit<
-  ComponentProps<typeof TextField>,
+  ComponentProps<typeof FormField>,
   keyof RHFProps<TFieldValues>
 > &
   RHFProps<TFieldValues>;

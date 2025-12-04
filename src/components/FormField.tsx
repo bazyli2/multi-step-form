@@ -28,7 +28,7 @@ interface OwnProps {
   required?: boolean;
   gridProps: ComponentProps<typeof FormGrid>;
   error?: boolean;
-  helperText: string;
+  helperText?: string;
 }
 
 type Props = Omit<ComponentProps<typeof OutlinedInput>, keyof OwnProps> &
