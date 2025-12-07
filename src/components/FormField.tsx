@@ -15,7 +15,7 @@ export function FormField(props: Props) {
       <FormLabel htmlFor={id} required={required} error={error}>
         {label}
       </FormLabel>
-      <OutlinedInput {...rest} id={id} required={required} error={error} />
+      <OutlinedInput {...rest} id={id} error={error} />
       <FormHelperText error={error} required={required}>
         {helperText}
       </FormHelperText>

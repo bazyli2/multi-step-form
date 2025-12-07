@@ -7,7 +7,7 @@ import {
 } from "react-hook-form";
 import { FormField } from "./FormField";
 
-export function RHFTextField<TFieldValues extends FieldValues>(
+export function RHFFormField<TFieldValues extends FieldValues>(
   props: Props<TFieldValues>,
 ) {
   const { name, register, error, ...rest } = props;
