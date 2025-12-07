@@ -19,6 +19,7 @@ import AccountBalanceRoundedIcon from "@mui/icons-material/AccountBalanceRounded
 import CreditCardRoundedIcon from "@mui/icons-material/CreditCardRounded";
 import SimCardRoundedIcon from "@mui/icons-material/SimCardRounded";
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";
+import { withMask } from "use-mask-input";
 
 const Card = styled(MuiCard)<{ selected?: boolean }>(({ theme }) => ({
   border: "1px solid",
@@ -86,37 +87,11 @@ const FormGrid = styled("div")(() => ({
 
 export function PaymentDetails() {
   const [paymentType, setPaymentType] = React.useState("creditCard");
-  const [cardNumber, setCardNumber] = React.useState("");
-  const [cvv, setCvv] = React.useState("");
-  const [expirationDate, setExpirationDate] = React.useState("");
 
   const handlePaymentTypeChange = (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
     setPaymentType(event.target.value);
-  };
-
-  const handleCardNumberChange = (event: { target: { value: string } }) => {
-    const value = event.target.value.replace(/\D/g, "");
-    const formattedValue = value.replace(/(\d{4})(?=\d)/g, "$1 ");
-    if (value.length <= 16) {
-      setCardNumber(formattedValue);
-    }
-  };
-
-  const handleCvvChange = (event: { target: { value: string } }) => {
-    const value = event.target.value.replace(/\D/g, "");
-    if (value.length <= 3) {
-      setCvv(value);
-    }
-  };
-
-  const handleExpirationDateChange = (event: { target: { value: string } }) => {
-    const value = event.target.value.replace(/\D/g, "");
-    const formattedValue = value.replace(/(\d{2})(?=\d{2})/, "$1/");
-    if (value.length <= 4) {
-      setExpirationDate(formattedValue);
-    }
   };
 
   return (
@@ -235,8 +210,7 @@ export function PaymentDetails() {
                   placeholder="0000 0000 0000 0000"
                   required
                   size="small"
-                  value={cardNumber}
-                  onChange={handleCardNumberChange}
+                  inputRef={withMask("9999 9999 9999 9999")}
                 />
               </FormGrid>
               <FormGrid sx={{ maxWidth: "20%" }}>
@@ -249,8 +223,7 @@ export function PaymentDetails() {
                   placeholder="123"
                   required
                   size="small"
-                  value={cvv}
-                  onChange={handleCvvChange}
+                  inputRef={withMask("999")}
                 />
               </FormGrid>
             </Box>
@@ -277,8 +250,7 @@ export function PaymentDetails() {
                   placeholder="MM/YY"
                   required
                   size="small"
-                  value={expirationDate}
-                  onChange={handleExpirationDateChange}
+                  inputRef={withMask("99/99")}
                 />
               </FormGrid>
             </Box>
