@@ -3,25 +3,15 @@
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormLabel from "@mui/material/FormLabel";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import Typography from "@mui/material/Typography";
 import CreditCardRoundedIcon from "@mui/icons-material/CreditCardRounded";
 import SimCardRoundedIcon from "@mui/icons-material/SimCardRounded";
-import { withMask } from "use-mask-input";
-import { styled } from "@mui/material/styles";
-import { Grid } from "@mui/material";
 import { PaymentContainer } from "./PaymentContainer";
 import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RHFMaskFormField } from "@/components/RHFMaskFormField";
 import { RHFFormField } from "@/components/RHFFormField";
-
-const FormGrid = styled(Grid)(() => ({
-  display: "flex",
-  flexDirection: "column",
-}));
 
 const formSchema = z.object({
   cardNumber: z.string(),
