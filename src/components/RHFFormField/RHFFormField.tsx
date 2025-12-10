@@ -5,7 +5,7 @@ import {
   Path,
   UseFormRegister,
 } from "react-hook-form";
-import { FormField } from "./FormField";
+import { FormField } from "../FormField";
 
 export function RHFFormField<TFieldValues extends FieldValues>(
   props: Props<TFieldValues>,

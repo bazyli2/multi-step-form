@@ -11,7 +11,7 @@ export function FormField(props: Props) {
   const id = useId();
   const { label, required, gridProps, error, helperText, ...rest } = props;
   return (
-    <FormGrid {...gridProps}>
+    <FormGrid {...(gridProps ?? {})}>
       <FormLabel htmlFor={id} required={required} error={error}>
         {label}
       </FormLabel>
@@ -26,7 +26,7 @@ export function FormField(props: Props) {
 interface OwnProps {
   label: string;
   required?: boolean;
-  gridProps: ComponentProps<typeof FormGrid>;
+  gridProps?: ComponentProps<typeof FormGrid>;
   error?: boolean;
   helperText?: string;
 }
